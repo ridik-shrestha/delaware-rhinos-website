@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delaware Rhinos Cricket Club | One Team. One Brotherhood.</title>
+    <meta name="description" content="Delaware Rhinos Cricket Club - Proudly representing the Nepali community through cricket, friendship, and sportsmanship in Delaware.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rhinoNavy: '#173059',
+                        rhinoRed: '#D01C34',
+                        rhinoBlue: '#3A7DC6',
+                        rhinoDark: '#122146',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-rhinoDark text-slate-100 font-sans antialiased selection:bg-rhinoRed selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <header class="fixed top-0 w-full bg-rhinoNavy/95 backdrop-blur-md border-b border-slate-800 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <img src="images/logo.png" alt="Delaware Rhinos Logo" class="w-12 h-12 object-contain hover:scale-105 transition">
+                    <div>
+                        <span class="text-xl font-black tracking-wider text-white uppercase block leading-none">DELAWARE <span class="text-rhinoRed">RHINOS</span></span>
+                        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Cricket Club</span>
+                    </div>
+                </a>
+
+                <nav class="hidden lg:flex space-x-6 text-xs font-bold uppercase tracking-wider items-center">
+                    <a href="index.html" class="text-rhinoRed transition">Home</a>
+<a href="about.html" class="hover:text-rhinoRed transition">About</a>
+<a href="team.html" class="hover:text-rhinoRed transition">Team</a>
+<a href="gallery.html" class="hover:text-rhinoRed transition">Gallery</a>
+<a href="matches.html" class="hover:text-rhinoRed transition">Matches</a>
+<a href="sponsors.html" class="hover:text-rhinoRed transition">Sponsors</a>
+<a href="join.html" class="bg-rhinoRed hover:bg-red-700 text-white px-4 py-2 rounded-md font-extrabold transition shadow-md">Join Us</a>
+<a href="contact.html" class="hover:text-rhinoRed transition">Contact</a>
+
+                </nav>
+
+                <button id="menu-btn" class="lg:hidden text-slate-300 focus:outline-none text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-rhinoNavy border-b border-slate-800 px-4 pt-2 pb-6 space-y-3 font-semibold text-center uppercase tracking-wider text-sm">
+            <a href="index.html" class="block py-2 text-rhinoRed">Home</a>
+<a href="about.html" class="block py-2 hover:text-rhinoRed">About</a>
+<a href="team.html" class="block py-2 hover:text-rhinoRed">Team</a>
+<a href="gallery.html" class="block py-2 hover:text-rhinoRed">Gallery</a>
+<a href="matches.html" class="block py-2 hover:text-rhinoRed">Matches</a>
+<a href="sponsors.html" class="block py-2 hover:text-rhinoRed">Sponsors</a>
+<a href="join.html" class="block py-2 bg-rhinoRed text-white rounded-md mt-2">Join Us</a>
+<a href="contact.html" class="block py-2 hover:text-rhinoRed">Contact</a>
+
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-rhinoDark via-rhinoDark/80 to-rhinoNavy/70 z-10"></div>
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/Team.jpg');"></div>
+
+        <div class="relative z-20 max-w-5xl mx-auto px-4 text-center py-20 flex flex-col items-center">
+            <h1 class="text-5xl md:text-7xl font-black text-white uppercase tracking-tight mb-3">
+                DELAWARE <span class="text-rhinoRed">RHINOS</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-bold text-slate-200 uppercase tracking-widest mb-1">
+                One Team. One Brotherhood. Endless Memories.
+            </p>
+            <p class="text-lg font-black text-rhinoRed uppercase tracking-wider mb-6">Go Rhinos! 🦏</p>
+            
+            <p class="max-w-2xl mx-auto text-slate-300 text-base md:text-lg mb-8 font-light">
+                Proudly representing the Nepali community through cricket, friendship, and sportsmanship in Delaware.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
+                <a href="team.html" class="px-8 py-3.5 bg-rhinoRed hover:bg-red-700 font-bold uppercase tracking-wider rounded transition shadow-lg shadow-red-900/40 text-center">
+                    Meet Our Team
+                </a>
+                <a href="join.html" class="px-8 py-3.5 bg-rhinoNavy hover:bg-slate-800 border border-slate-700 font-bold uppercase tracking-wider rounded transition text-center">
+                    Join Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CULTURAL IDENTITY SECTION -->
+    <section class="py-16 bg-gradient-to-b from-rhinoDark to-rhinoNavy border-t border-slate-800 text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="flex items-center justify-center space-x-6 text-4xl md:text-5xl mb-6">
+                <span>🇳🇵</span>
+                <span class="text-rhinoRed">🏏</span>
+                <span>🇺🇸</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-1">
+                From Nepal.
+            </h2>
+            <h3 class="text-2xl md:text-3xl font-black uppercase tracking-tight text-rhinoBlue mb-6">
+                Growing Together in Delaware.
+            </h3>
+            <p class="text-slate-300 text-lg leading-relaxed max-w-3xl mx-auto font-light">
+                Founded in 2023, Delaware Rhinos is more than a cricket club. We are a brotherhood united by our love for cricket, our Nepali heritage, and our commitment to staying active, supporting one another, and building lasting friendships both on and off the field.
+            </p>
+        </div>
+    </section>
+
+    <!-- CORE VALUES SECTION -->
+    <section class="py-20 bg-rhinoNavy/50 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-black uppercase text-white">Our Pillars</h2>
+                <div class="w-16 h-1 bg-rhinoRed mx-auto mt-2"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-rhinoNavy/80 p-8 rounded-xl border border-slate-800 hover:border-rhinoRed transition duration-300 text-center group">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition duration-300">🤝</div>
+                    <h3 class="text-xl font-bold uppercase text-white mb-2">Brotherhood</h3>
+                    <p class="text-slate-400 text-sm">Building friendships beyond the boundary.</p>
+                </div>
+                <div class="bg-rhinoNavy/80 p-8 rounded-xl border border-slate-800 hover:border-rhinoRed transition duration-300 text-center group">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition duration-300">🏏</div>
+                    <h3 class="text-xl font-bold uppercase text-white mb-2">Cricket</h3>
+                    <p class="text-slate-400 text-sm">Celebrating the spirit of the game.</p>
+                </div>
+                <div class="bg-rhinoNavy/80 p-8 rounded-xl border border-slate-800 hover:border-rhinoRed transition duration-300 text-center group">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition duration-300">❤️</div>
+                    <h3 class="text-xl font-bold uppercase text-white mb-2">Health</h3>
+                    <p class="text-slate-400 text-sm">Staying active and inspiring healthier lifestyles.</p>
+                </div>
+                <div class="bg-rhinoNavy/80 p-8 rounded-xl border border-slate-800 hover:border-rhinoRed transition duration-300 text-center group">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition duration-300">🌍</div>
+                    <h3 class="text-xl font-bold uppercase text-white mb-2">Community</h3>
+                    <p class="text-slate-400 text-sm">Supporting and connecting our community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM PREVIEW SECTION -->
+    <section class="py-20 bg-rhinoDark border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-black uppercase text-white">The Squad</h2>
+                    <p class="text-slate-400 text-sm mt-1">Meet the players leading the Rhinos on the field</p>
+                </div>
+                <a href="team.html" class="mt-4 md:mt-0 text-rhinoRed hover:text-white font-bold text-sm uppercase tracking-wider transition flex items-center gap-2">
+                    View Full Roster <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div id="squad-preview" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="col-span-full text-center text-slate-400">Loading squad...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-rhinoDark border-t border-slate-800 py-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <div class="flex items-center justify-center space-x-3">
+                <img src="images/logo.png" alt="Rhinos Logo" class="w-8 h-8 object-contain">
+                <span class="font-black text-white text-lg tracking-wider">DELAWARE RHINOS</span>
+            </div>
+            <p class="text-xs uppercase tracking-widest text-slate-500">
+                One Team. One Brotherhood. Endless Memories.
+            </p>
+            <div class="flex justify-center space-x-6 text-lg">
+                <a href="https://facebook.com" target="_blank" class="hover:text-rhinoRed transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="contact.html" class="hover:text-rhinoRed transition"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p class="text-xs text-slate-600">
+                &copy; Delaware Rhinos Cricket Club. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/players-data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
