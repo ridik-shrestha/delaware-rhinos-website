@@ -30,3 +30,54 @@ body {
     transform: translateY(-5px);
     border-color: var(--rhino-red);
 }
+
+.sponsor-marquee {
+    overflow: hidden;
+}
+
+.sponsor-track {
+    display: flex;
+    min-width: max-content;
+    animation: sponsor-slide 30s linear infinite;
+    will-change: transform;
+}
+
+.sponsor-set {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.sponsor-card {
+    flex: 0 0 280px;
+}
+
+@keyframes sponsor-slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* News marquee - matches sponsor behavior but independent timing */
+.news-marquee {
+    overflow: hidden;
+}
+
+.news-track {
+    display: flex;
+    min-width: max-content;
+    animation: news-slide 36s linear infinite;
+    will-change: transform;
+    gap: 1.5rem;
+}
+
+.news-card {
+    flex: 0 0 auto;
+}
+
+@keyframes news-slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}

@@ -117,6 +117,23 @@
         </div>
     </section>
 
+    <!-- LATEST NEWS SECTION -->
+    <section class="py-20 bg-rhinoDark border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-black uppercase text-white">Latest Rhinos News</h2>
+                <p class="text-slate-400 text-sm mt-3 max-w-2xl mx-auto">Recent club updates, match headlines, and community stories.</p>
+            </div>
+            <div class="overflow-hidden rounded-3xl border border-slate-800 bg-slate-950/80 p-6">
+                <div class="news-marquee">
+                    <div id="news-cards" class="news-track flex items-stretch gap-6">
+                        <div class="col-span-full text-center text-slate-400">Loading news...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CORE VALUES SECTION -->
     <section class="py-20 bg-rhinoNavy/50 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -150,21 +167,88 @@
         </div>
     </section>
 
-    <!-- TEAM PREVIEW SECTION -->
+    <!-- HERO MESSAGE VIDEO SECTION -->
+    <section class="py-20 bg-rhinoDark border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-black uppercase text-white">Encouraging Message from Our Hero</h2>
+            </div>
+            <div class="group relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950/90 shadow-2xl">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300 group-hover:opacity-0">
+                    <div class="flex h-24 w-24 items-center justify-center rounded-full border-2 border-white/20 bg-white/10 text-white shadow-2xl backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+                        <i class="fa-solid fa-play text-3xl"></i>
+                    </div>
+                </div>
+                <video controls class="w-full h-full min-h-[320px] bg-black">
+                    <source src="images/videos/Message-From-Sompal.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPONSOR SHOWCASE SECTION -->
     <section class="py-20 bg-rhinoDark border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-end justify-between mb-12">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-black uppercase text-white">The Squad</h2>
-                    <p class="text-slate-400 text-sm mt-1">Meet the players leading the Rhinos on the field</p>
+                    <h2 class="text-3xl md:text-4xl font-black uppercase text-white">Our Sponsors</h2>
+                    <p class="text-slate-400 text-sm mt-1">Proud partners driving the Rhinos forward.</p>
                 </div>
-                <a href="team.html" class="mt-4 md:mt-0 text-rhinoRed hover:text-white font-bold text-sm uppercase tracking-wider transition flex items-center gap-2">
-                    View Full Roster <i class="fa-solid fa-arrow-right"></i>
+                <a href="sponsors.html" class="mt-4 md:mt-0 text-rhinoRed hover:text-white font-bold text-sm uppercase tracking-wider transition flex items-center gap-2">
+                    View All Sponsors <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
 
-            <div id="squad-preview" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="col-span-full text-center text-slate-400">Loading squad...</div>
+            <div class="overflow-hidden rounded-3xl border border-slate-800 bg-slate-950/80 p-6">
+                <div class="sponsor-marquee">
+                    <div class="sponsor-track">
+                        <div class="sponsor-set flex gap-6">
+                            <div class="sponsor-card min-w-[280px] bg-rhinoNavy/90 border border-slate-800 rounded-3xl p-8 text-left shadow-xl">
+                                <div class="text-4xl mb-4">🍛</div>
+                                <h3 class="text-xl font-black uppercase text-white mb-2">Tasty Bites Indian Restaurant</h3>
+                                <p class="text-slate-300 text-sm mb-4">Official Partner offering authentic Nepalese and Indian cuisine while supporting the Rhinos community.</p>
+                                <a href="https://tastybitesus.com/" target="_blank" class="text-rhinoRed font-bold uppercase text-xs tracking-wider hover:underline">tastybitesus.com</a>
+                            </div>
+                            <div class="sponsor-card min-w-[280px] bg-rhinoRed/90 border border-slate-800 rounded-3xl p-8 text-left shadow-xl">
+                                <div class="text-4xl mb-4">✈️</div>
+                                <h3 class="text-xl font-black uppercase text-white mb-2">Angel Holiday Travel & Tours Pvt. Ltd.</h3>
+                                <p class="text-slate-300 text-sm mb-4">Travel Partner delivering premium international and community travel services for team journeys and fans.</p>
+                                <a href="https://angelholidaytravels.com.np/" target="_blank" class="text-white font-bold uppercase text-xs tracking-wider underline decoration-rhinoBlue decoration-2 hover:text-rhinoBlue">angelholidaytravels.com.np</a>
+                            </div>
+                            <div class="sponsor-card min-w-[280px] bg-rhinoBlue/90 border border-slate-800 rounded-3xl p-8 text-left shadow-xl">
+                                <div class="text-4xl mb-4">🏡</div>
+                                <h3 class="text-xl font-black uppercase text-white mb-2">Dipak Bhatta Realtor®</h3>
+                                <p class="text-slate-300 text-sm mb-2">Real Estate Partner licensed in Pennsylvania and Delaware.</p>
+                                <p class="text-slate-300 text-xs uppercase tracking-wider mb-2">Phone: <span class="text-white">757-287-8882</span></p>
+                                <p class="text-slate-300 text-xs uppercase tracking-wider mb-4">Email: <span class="text-white">dipak.bhatta@cbpref.com</span></p>
+                                <span class="text-rhinoRed font-bold uppercase text-xs tracking-wider">Coldwell Banker Preferred</span>
+                            </div>
+                        </div>
+                        <div class="sponsor-set flex gap-6">
+                            <div class="sponsor-card min-w-[280px] bg-rhinoNavy/90 border border-slate-800 rounded-3xl p-8 text-left shadow-xl">
+                                <div class="text-4xl mb-4">🍛</div>
+                                <h3 class="text-xl font-black uppercase text-white mb-2">Tasty Bites Indian Restaurant</h3>
+                                <p class="text-slate-300 text-sm mb-4">Official Partner offering authentic Nepalese and Indian cuisine while supporting the Rhinos community.</p>
+                                <a href="https://tastybitesus.com/" target="_blank" class="text-rhinoRed font-bold uppercase text-xs tracking-wider hover:underline">tastybitesus.com</a>
+                            </div>
+                            <div class="sponsor-card min-w-[280px] bg-rhinoRed/90 border border-slate-800 rounded-3xl p-8 text-left shadow-xl">
+                                <div class="text-4xl mb-4">✈️</div>
+                                <h3 class="text-xl font-black uppercase text-white mb-2">Angel Holiday Travel & Tours Pvt. Ltd.</h3>
+                                <p class="text-slate-300 text-sm mb-4">Travel Partner delivering premium international and community travel services for team journeys and fans.</p>
+                                <a href="https://angelholidaytravels.com.np/" target="_blank" class="text-white font-bold uppercase text-xs tracking-wider underline decoration-rhinoBlue decoration-2 hover:text-rhinoBlue">angelholidaytravels.com.np</a>
+                            </div>
+                            <div class="sponsor-card min-w-[280px] bg-rhinoBlue/90 border border-slate-800 rounded-3xl p-8 text-left shadow-xl">
+                                <div class="text-4xl mb-4">🏡</div>
+                                <h3 class="text-xl font-black uppercase text-white mb-2">Dipak Bhatta Realtor®</h3>
+                                <p class="text-slate-300 text-sm mb-2">Real Estate Partner licensed in Pennsylvania and Delaware.</p>
+                                <p class="text-slate-300 text-xs uppercase tracking-wider mb-2">Phone: <span class="text-white">757-287-8882</span></p>
+                                <p class="text-slate-300 text-xs uppercase tracking-wider mb-4">Email: <span class="text-white">dipak.bhatta@cbpref.com</span></p>
+                                <span class="text-rhinoRed font-bold uppercase text-xs tracking-wider">Coldwell Banker Preferred</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -189,7 +273,7 @@
         </div>
     </footer>
 
-    <script src="js/players-data.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
+
