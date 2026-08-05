@@ -76,7 +76,7 @@
     "lastName": "Shrestha",
     "fullName": "Ridik Shrestha",
     "role": "Batsman",
-    "jersey": null,
+    "jersey": 44,
     "captain": false,
     "image": "images/players/ridik-shrestha.jpg"
   },
