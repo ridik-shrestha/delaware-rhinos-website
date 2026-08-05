@@ -90,26 +90,26 @@
             </p>
         </div>
 
-        <form class="bg-rhinoNavy p-8 rounded-xl border border-slate-800 space-y-6">
+        <form action="mailto:admin@delawarerhinos.com" method="POST" enctype="text/plain" class="bg-rhinoNavy p-8 rounded-xl border border-slate-800 space-y-6">
             <div>
                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Full Name</label>
-                <input type="text" placeholder="Your name" class="w-full bg-rhinoDark border border-slate-800 rounded-md px-4 py-3 text-white text-sm focus:outline-none focus:border-rhinoRed">
+                <input name="Name" type="text" placeholder="Your name" class="w-full bg-rhinoDark border border-slate-800 rounded-md px-4 py-3 text-white text-sm focus:outline-none focus:border-rhinoRed">
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                     <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Email Address</label>
-                    <input type="email" placeholder="you@example.com" class="w-full bg-rhinoDark border border-slate-800 rounded-md px-4 py-3 text-white text-sm focus:outline-none focus:border-rhinoRed">
+                    <input name="Email" type="email" placeholder="you@example.com" class="w-full bg-rhinoDark border border-slate-800 rounded-md px-4 py-3 text-white text-sm focus:outline-none focus:border-rhinoRed">
                 </div>
                 <div>
                     <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Phone Number</label>
-                    <input type="tel" placeholder="(555) 000-0000" class="w-full bg-rhinoDark border border-slate-800 rounded-md px-4 py-3 text-white text-sm focus:outline-none focus:border-rhinoRed">
+                    <input name="Phone" type="tel" placeholder="(555) 000-0000" class="w-full bg-rhinoDark border border-slate-800 rounded-md px-4 py-3 text-white text-sm focus:outline-none focus:border-rhinoRed">
                 </div>
             </div>
             <div>
                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Cricket Experience</label>
-                <textarea rows="4" placeholder="Tell us about your playing experience..." class="w-full bg-rhinoDark border border-slate-800 rounded-md px-4 py-3 text-white text-sm focus:outline-none focus:border-rhinoRed"></textarea>
+                <textarea name="Experience" rows="4" placeholder="Tell us about your playing experience..." class="w-full bg-rhinoDark border border-slate-800 rounded-md px-4 py-3 text-white text-sm focus:outline-none focus:border-rhinoRed"></textarea>
             </div>
-            <button type="button" class="w-full bg-rhinoRed hover:bg-red-700 text-white font-bold uppercase tracking-wider py-3.5 rounded-md transition shadow-lg">
+            <button type="submit" class="w-full bg-rhinoRed hover:bg-red-700 text-white font-bold uppercase tracking-wider py-3.5 rounded-md transition shadow-lg">
                 Submit Application
             </button>
         </form>
