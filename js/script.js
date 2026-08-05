@@ -23,27 +23,40 @@ function loadVisitorCount() {
         return;
     }
 
-    const namespace = 'delaware-rhinos-website';
-    const key = 'total_visitors';
-    const url = `https://api.countapi.xyz/hit/${namespace}/${key}`;
+    const pageUrl = encodeURIComponent(window.location.href);
+    const sources = [
+        `https://hits.seeyoufarm.com/api/count/incr?url=${pageUrl}&count=1`,
+        `https://api.countapi.xyz/hit/delaware-rhinos-website/${encodeURIComponent(window.location.hostname)}`
+    ];
 
-    fetch(url)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('CountAPI request failed');
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (typeof data.value !== 'number') {
-                throw new Error('Invalid CountAPI response');
-            }
-            badge.textContent = `Total Visitor Count: ${data.value.toLocaleString()}`;
-        })
-        .catch(error => {
-            console.error('Failed to load visitor count:', error);
+    const trySource = index => {
+        if (index >= sources.length) {
             badge.textContent = 'Visitor count unavailable';
-        });
+            return;
+        }
+
+        fetch(sources[index])
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`visitor source ${index} failed`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                const value = typeof data.value === 'number' ? data.value : typeof data.count === 'number' ? data.count : null;
+                if (typeof value !== 'number') {
+                    throw new Error(`Invalid response from source ${index}`);
+                }
+                badge.textContent = `Total Visitor Count: ${value.toLocaleString()}`;
+                badge.classList.remove('opacity-0', 'pointer-events-none');
+            })
+            .catch(error => {
+                console.warn('Visitor count source failed:', sources[index], error);
+                trySource(index + 1);
+            });
+    };
+
+    trySource(0);
 }
 
 function loadNews() {
