@@ -10,11 +10,41 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     loadPlayers();
+    loadVisitorCount();
     loadNews();
     loadGallery();
     loadRecentResults();
     initGalleryModal();
 });
+
+function loadVisitorCount() {
+    const badge = document.getElementById('visitor-count-badge');
+    if (!badge) {
+        return;
+    }
+
+    const namespace = 'delaware-rhinos-website';
+    const key = 'total_visitors';
+    const url = `https://api.countapi.xyz/hit/${namespace}/${key}`;
+
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('CountAPI request failed');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (typeof data.value !== 'number') {
+                throw new Error('Invalid CountAPI response');
+            }
+            badge.textContent = `Total Visitor Count: ${data.value.toLocaleString()}`;
+        })
+        .catch(error => {
+            console.error('Failed to load visitor count:', error);
+            badge.textContent = 'Visitor count unavailable';
+        });
+}
 
 function loadNews() {
     const newsGrid = document.getElementById('news-cards');
