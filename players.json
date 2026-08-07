@@ -1,137 +1,195 @@
-[
-  {
-    "firstName": "Bivek",
-    "lastName": "Pokhrel",
-    "fullName": "Bivek Pokhrel",
-    "role": "All rounder",
-    "jersey": null,
-    "captain": false,
-    "image": "images/players/bivek-pokhrel.png"
-  },
-  {
-    "firstName": "Devraj",
-    "lastName": "Maidali",
-    "fullName": "Devraj Maidali",
-    "role": "All rounder",
-    "jersey": null,
-    "captain": false,
-    "image": "images/players/devraj-maidali.png"
-  },
-  {
-    "firstName": "Dipak",
-    "lastName": "Bhatta",
-    "fullName": "Dipak Bhatta",
-    "role": "Batsman",
-    "jersey": null,
-    "captain": false,
-    "image": "images/players/dipak-bhatta.png"
-  },
-  {
-    "firstName": "Jitendra",
-    "lastName": "Rana",
-    "fullName": "Jitendra Rana",
-    "role": "Batsman",
-    "jersey": null,
-    "captain": false,
-    "image": "images/players/jitendra-rana.png"
-  },
-  {
-    "firstName": "Manoj",
-    "lastName": "Subedi",
-    "fullName": "Manoj Subedi",
-    "role": "Batsman/Wicketkeeper",
-    "jersey": null,
-    "captain": false,
-    "image": "images/players/manoj-subedi.png"
-  },
-  {
-    "firstName": "Mukti",
-    "lastName": "Bhandari",
-    "fullName": "Mukti Bhandari",
-    "role": "All rounder",
-    "jersey": null,
-    "captain": false,
-    "image": "images/players/mukti-bhandari.png"
-  },
-  {
-    "firstName": "Prakash",
-    "lastName": "Bhattarai",
-    "fullName": "Prakash Bhattarai",
-    "role": "Bowler",
-    "jersey": null,
-    "captain": false,
-    "image": "images/players/prakash-bhattarai.jpg"
-  },
-  {
-    "firstName": "Pratap",
-    "lastName": "Kafle",
-    "fullName": "Pratap Kafle",
-    "role": "All rounder",
-    "jersey": null,
-    "captain": false,
-    "image": "images/players/pratap-kafle.jpg"
-  },
-  {
-    "firstName": "Ridik",
-    "lastName": "Shrestha",
-    "fullName": "Ridik Shrestha",
-    "role": "Batsman",
-    "jersey": 44,
-    "captain": false,
-    "image": "images/players/ridik-shrestha.jpg"
-  },
-  {
-    "firstName": "Sanjeev",
-    "lastName": "Dhital",
-    "fullName": "Sanjeev Dhital",
-    "role": "Bowler",
-    "jersey": null,
-    "captain": false,
-    "image": "images/players/sanjeev-dhital.jpg"
-  },
-  {
-    "firstName": "Subi",
-    "lastName": "Joyous",
-    "fullName": "Subi Joyous",
-    "role": "All rounder",
-    "jersey": null,
-    "captain": false,
-    "image": "images/players/subi-joyous.png"
-  },
-  {
-    "firstName": "Sudhir",
-    "lastName": "Yadav",
-    "fullName": "Sudhir Yadav",
-    "role": "All rounder",
-    "jersey": null,
-    "captain": false,
-    "image": "images/players/sudhir-yadav.png"
-  },
-  {
-    "firstName": "Suraj",
-    "lastName": "Bastola",
-    "fullName": "Suraj Bastola",
-    "role": "All rounder",
-    "jersey": null,
-    "captain": false,
-    "image": "images/players/suraj-bastola.png"
-  },
-  {
-    "firstName": "Uday",
-    "lastName": "Kunwar",
-    "fullName": "Uday Kunwar",
-    "role": "All rounder",
-    "jersey": null,
-    "captain": true,
-    "image": "images/players/uday-kunwar.png"
-  },
-  {
-    "firstName": "Yogesh",
-    "lastName": "Joshi",
-    "fullName": "Yogesh Joshi",
-    "role": "Batsman/WicketKeeper",
-    "jersey": null,
-    "captain": false,
-    "image": "images/players/yogesh-joshi.png"
-  }
-]
+{
+  "active": [
+    {
+      "firstName": "Bivek",
+      "lastName": "Pokhrel",
+      "fullName": "Bivek Pokhrel",
+      "role": "All rounder",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/bivek-pokhrel.png"
+    },
+    {
+      "firstName": "Devraj",
+      "lastName": "Maidali",
+      "fullName": "Devraj Maidali",
+      "role": "All rounder",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/devraj-maidali.png"
+    },
+    {
+      "firstName": "Dipak",
+      "lastName": "Bhatta",
+      "fullName": "Dipak Bhatta",
+      "role": "Batsman",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/dipak-bhatta.png"
+    },
+    {
+      "firstName": "Jitendra",
+      "lastName": "Rana",
+      "fullName": "Jitendra Rana",
+      "role": "Batsman",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/jitendra-rana.png"
+    },
+    {
+      "firstName": "Manoj",
+      "lastName": "Subedi",
+      "fullName": "Manoj Subedi",
+      "role": "Batsman/Wicketkeeper",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/manoj-subedi.png"
+    },
+    {
+      "firstName": "Mukti",
+      "lastName": "Bhandari",
+      "fullName": "Mukti Bhandari",
+      "role": "All rounder",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/mukti-bhandari.png"
+    },
+    {
+      "firstName": "Prakash",
+      "lastName": "Bhattarai",
+      "fullName": "Prakash Bhattarai",
+      "role": "Bowler",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/prakash-bhattarai.jpg"
+    },
+    {
+      "firstName": "Pratap",
+      "lastName": "Kafle",
+      "fullName": "Pratap Kafle",
+      "role": "All rounder",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/pratap-kafle.jpg"
+    },
+    {
+      "firstName": "Ridik",
+      "lastName": "Shrestha",
+      "fullName": "Ridik Shrestha",
+      "role": "Batsman",
+      "jersey": 44,
+      "captain": false,
+      "image": "images/players/ridik-shrestha.jpg"
+    },
+    {
+      "firstName": "Sanjeev",
+      "lastName": "Dhital",
+      "fullName": "Sanjeev Dhital",
+      "role": "Bowler",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/sanjeev-dhital.jpg"
+    },
+    {
+      "firstName": "Subi",
+      "lastName": "Joyous",
+      "fullName": "Subi Joyous",
+      "role": "All rounder",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/subi-joyous.png"
+    },
+    {
+      "firstName": "Sudhir",
+      "lastName": "Yadav",
+      "fullName": "Sudhir Yadav",
+      "role": "All rounder",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/sudhir-yadav.png"
+    },
+    {
+      "firstName": "Suraj",
+      "lastName": "Bastola",
+      "fullName": "Suraj Bastola",
+      "role": "All rounder",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/suraj-bastola.png"
+    },
+    {
+      "firstName": "Uday",
+      "lastName": "Kunwar",
+      "fullName": "Uday Kunwar",
+      "role": "All rounder",
+      "jersey": null,
+      "captain": true,
+      "image": "images/players/uday-kunwar.png"
+    },
+    {
+      "firstName": "Yogesh",
+      "lastName": "Joshi",
+      "fullName": "Yogesh Joshi",
+      "role": "Batsman/Wicketkeeper",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/yogesh-joshi.png"
+    }
+  ],
+  "legacy": [
+    {
+      "firstName": "Bhanu",
+      "lastName": "Poudel",
+      "fullName": "Bhanu Poudel",
+      "role": "Batsman",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/bhanu-poudel.png"
+    },
+    {
+      "firstName": "Bikash",
+      "lastName": "Dhakal",
+      "fullName": "Bikash Dhakal",
+      "role": "Batsman",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/bikash-dhakal.png"
+    },
+    {
+      "firstName": "Krishna",
+      "lastName": "Tamrakar",
+      "fullName": "Krishna Tamrakar",
+      "role": "All rounder",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/krishna-tamrakar.png"
+    },
+    {
+      "firstName": "Bishal",
+      "lastName": "Tamang",
+      "fullName": "Bishal Tamang",
+      "role": "Batsman/Wicketkeeper",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/bishal-tamang.png"
+    },
+    {
+      "firstName": "Narayan",
+      "lastName": "Poudel",
+      "fullName": "Narayan Poudel",
+      "role": "Bowler",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/narayan-poudel.png"
+    },
+    {
+      "firstName": "Himal",
+      "lastName": "Acharya",
+      "fullName": "Himal Acharya",
+      "role": "Bowler",
+      "jersey": null,
+      "captain": false,
+      "image": "images/players/himal-acharya.png"
+    }
+  ]
+}

@@ -199,33 +199,54 @@ function loadRecentResults() {
 
 function loadPlayers() {
     const previewContainer = document.getElementById('squad-preview');
-    const rosterContainer = document.getElementById('team-roster');
+    const currentRosterContainer = document.getElementById('current-roster');
+    const legacyRosterContainer = document.getElementById('legacy-roster');
+    const legacyContainer = document.getElementById('team-roster');
 
-    if (!previewContainer && !rosterContainer) {
+    if (!previewContainer && !currentRosterContainer && !legacyRosterContainer && !legacyContainer) {
         return;
     }
 
-    const renderFromData = players => {
-        const sortedPlayers = players.slice().sort((a, b) => {
+    const sortPlayers = players => {
+        return players.slice().sort((a, b) => {
             if (a.captain && !b.captain) return -1;
             if (!a.captain && b.captain) return 1;
             return a.fullName.localeCompare(b.fullName);
         });
+    };
+
+    const renderFromData = data => {
+        const activePlayers = Array.isArray(data?.active) ? data.active : Array.isArray(data) ? data : [];
+        const legacyPlayers = Array.isArray(data?.legacy)
+            ? data.legacy
+            : Array.isArray(data?.legacyPlayers)
+                ? data.legacyPlayers
+                : [];
 
         if (previewContainer) {
-            renderPlayers(previewContainer, sortedPlayers.slice(0, 4));
+            const previewPlayers = sortPlayers(activePlayers).slice(0, 4);
+            renderPlayers(previewContainer, previewPlayers);
         }
-        if (rosterContainer) {
-            renderPlayers(rosterContainer, sortedPlayers);
+
+        if (currentRosterContainer) {
+            renderPlayers(currentRosterContainer, sortPlayers(activePlayers));
+        }
+
+        if (legacyRosterContainer) {
+            renderPlayers(legacyRosterContainer, sortPlayers(legacyPlayers), 'Legacy roster coming soon.');
+        }
+
+        if (legacyContainer && !currentRosterContainer && !legacyRosterContainer) {
+            renderPlayers(legacyContainer, sortPlayers(activePlayers));
         }
     };
 
-    if (window.RHINOS_PLAYERS && Array.isArray(window.RHINOS_PLAYERS)) {
+    if (window.RHINOS_PLAYERS) {
         renderFromData(window.RHINOS_PLAYERS);
         return;
     }
 
-    fetch('players.json')
+    fetch('players.json?v=20260807', { cache: 'no-store' })
         .then(response => {
             if (!response.ok) {
                 throw new Error('Unable to load players.json');
@@ -238,13 +259,19 @@ function loadPlayers() {
             if (previewContainer) {
                 previewContainer.innerHTML = '<div class="col-span-full text-center text-slate-400">Roster unavailable.</div>';
             }
-            if (rosterContainer) {
-                rosterContainer.innerHTML = '<div class="col-span-full text-center text-slate-400">Roster unavailable.</div>';
+            if (currentRosterContainer) {
+                currentRosterContainer.innerHTML = '<div class="col-span-full text-center text-slate-400">Current roster unavailable.</div>';
+            }
+            if (legacyRosterContainer) {
+                legacyRosterContainer.innerHTML = '<div class="col-span-full text-center text-slate-400">Legacy roster unavailable.</div>';
+            }
+            if (legacyContainer && !currentRosterContainer && !legacyRosterContainer) {
+                legacyContainer.innerHTML = '<div class="col-span-full text-center text-slate-400">Roster unavailable.</div>';
             }
         });
 }
 
-function renderPlayers(container, players) {
+function renderPlayers(container, players, emptyMessage = 'No players available.') {
     const cards = players.map(player => {
         const jerseyText = player.jersey ? ` • Jersey #${player.jersey}` : '';
         const badgeText = player.captain ? 'Captain' : player.role;
@@ -273,7 +300,7 @@ function renderPlayers(container, players) {
         `;
     }).join('');
 
-    container.innerHTML = cards || '<div class="col-span-full text-center text-slate-400">No players available.</div>';
+    container.innerHTML = cards || `<div class="col-span-full text-center text-slate-400">${emptyMessage}</div>`;
 }
 
 function initGalleryModal() {
