@@ -49,7 +49,7 @@ function loadNews() {
                 }
 
                 return `
-                    <div class="news-card bg-rhinoNavy/80 p-8 rounded-3xl border border-slate-800 hover:border-rhinoRed transition duration-300 min-w-[280px]">
+                    <div class="news-card bg-rhinoNavy/80 p-8 rounded-3xl border border-slate-800 hover:border-rhinoRed transition duration-300 min-h-[220px]">
                         <div class="inline-flex items-center rounded-full bg-slate-900 px-4 py-2 text-xs uppercase tracking-[0.22em] text-slate-300 font-semibold mb-4">News</div>
                         <h3 class="text-xl font-black uppercase text-white leading-snug">${title}</h3>
                         <p class="text-slate-500 uppercase tracking-[0.2em] text-xs mt-4">${date}</p>
@@ -59,10 +59,25 @@ function loadNews() {
                 `;
             }).join('');
 
-            // insert the cards and duplicate them for a seamless marquee
-            newsGrid.innerHTML = cards + cards;
-            // ensure wrapper has marquee class (in case) and apply track behavior
-            newsGrid.classList.add('news-track');
+            newsGrid.innerHTML = cards;
+            const cardElements = Array.from(newsGrid.children).filter(child => child.classList.contains('news-card'));
+
+            if (cardElements.length > 0) {
+                let currentIndex = 0;
+
+                const showCard = index => {
+                    cardElements.forEach((card, cardIndex) => {
+                        card.classList.toggle('active', cardIndex === index);
+                    });
+                };
+
+                showCard(0);
+
+                setInterval(() => {
+                    currentIndex = (currentIndex + 1) % cardElements.length;
+                    showCard(currentIndex);
+                }, 5000);
+            }
         })
         .catch(error => {
             console.error('Failed to load news:', error);

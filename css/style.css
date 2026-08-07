@@ -60,24 +60,28 @@ body {
     }
 }
 
-/* News marquee - matches sponsor behavior but independent timing */
+/* News carousel */
 .news-marquee {
     overflow: hidden;
 }
 
 .news-track {
-    display: flex;
-    min-width: max-content;
-    animation: news-slide 36s linear infinite;
-    will-change: transform;
-    gap: 1.5rem;
+    position: relative;
+    width: 100%;
 }
 
 .news-card {
-    flex: 0 0 auto;
+    display: none;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-@keyframes news-slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+.news-card.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
